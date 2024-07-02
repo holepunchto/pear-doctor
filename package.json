@@ -1,0 +1,43 @@
+{
+  "name": "pear-doctor",
+  "version": "0.0.0",
+  "description": "> The Pear Doctor Application",
+  "main": "index.html",
+  "type": "module",
+  "scripts": {
+    "test": "standard --fix"
+  },
+  "pear": {
+    "gui": {
+      "backgroundColor": "#151517",
+      "height": 780,
+      "width": 1120
+    }
+  },
+  "standard": {
+    "globals": [
+      "Pear"
+    ]
+  },
+  "dependencies": {
+    "redhat-overpass-font": "^1.0.0"
+  },
+  "devDependencies": {
+    "brittle": "^3.4.0",
+    "standard": "^17.1.0"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/pear-doctor.git"
+  },
+  "keywords": [],
+  "author": "Holepunch Inc.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/pear-doctor/issues"
+  },
+  "homepage": "https://github.com/holepunchto/pear-doctor"
+}
