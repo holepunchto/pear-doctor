@@ -20,7 +20,8 @@
     ]
   },
   "dependencies": {
-    "redhat-overpass-font": "^1.0.0"
+    "redhat-overpass-font": "^1.0.0",
+    "which-runtime": "^1.2.0"
   },
   "devDependencies": {
     "brittle": "^3.4.0",

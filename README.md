@@ -13,6 +13,10 @@ pear run pear://doctor
 ```
 git clone https://github.com/holepunchto/pear-doctor
 cd pear-doctor
+npm install
+```
+
+```
 pear run --dev .
 ```
 
