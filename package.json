@@ -8,10 +8,11 @@
     "test": "standard --fix"
   },
   "pear": {
+    "name": "pear-doctor",
     "gui": {
       "backgroundColor": "#151517",
-      "height": 780,
-      "width": 1120
+      "height": 800,
+      "width": 1280
     }
   },
   "standard": {
@@ -20,8 +21,7 @@
     ]
   },
   "dependencies": {
-    "redhat-overpass-font": "^1.0.0",
-    "which-runtime": "^1.2.0"
+    "redhat-overpass-font": "^1.0.0"
   },
   "devDependencies": {
     "brittle": "^3.4.0",
