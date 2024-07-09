@@ -11,8 +11,8 @@
     "name": "pear-doctor",
     "gui": {
       "backgroundColor": "#151517",
-      "height": 800,
-      "width": 1280
+      "height": 1600,
+      "width": 1200
     }
   },
   "standard": {
