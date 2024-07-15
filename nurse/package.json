@@ -1,0 +1,18 @@
+{
+  "name": "pear-nurse",
+  "main": "index.html",
+  "type": "module",
+  "pear": {
+    "name": "pear-nurse",
+    "type": "desktop",
+    "gui": {
+      "backgroundColor": "#1F2430",
+      "height": 540,
+      "width": 720
+    }
+  },
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "pear dev"
+  }
+}
