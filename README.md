@@ -5,7 +5,7 @@
 ## Usage
 
 ```
-pear run pear://doctor
+pear run pear://<app-key>
 ```
 
 ## Development
