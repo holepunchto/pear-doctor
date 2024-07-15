@@ -21,7 +21,8 @@
     ]
   },
   "dependencies": {
-    "redhat-overpass-font": "^1.0.0"
+    "redhat-overpass-font": "^1.0.0",
+    "z32": "^1.1.0"
   },
   "devDependencies": {
     "brittle": "^3.4.0",
