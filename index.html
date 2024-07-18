@@ -21,7 +21,7 @@
       box-sizing: border-box;
       border-radius: 0.5rem;
       font-family: 'overpass-mono';
-      font-size: 14px;
+      font-size: 12px;
       -webkit-font-smoothing: antialiased;
       color: #efeaea;
       transition:
@@ -43,7 +43,6 @@
     }
 
     #bar {
-      backdrop-filter: blur(60.25rem);
       -webkit-app-region: drag;
       padding: 0;
       border-top-left-radius: 0.25rem;
@@ -56,6 +55,8 @@
       width: 100%;
       left: 0;
       top: 0;
+      background: #151517;
+      height: 2rem;
     }
 
     #bar:hover {
@@ -81,5 +82,10 @@
   </style>
   <div id="bar"><pear-ctrl></pear-ctrl></div>
   <doctor-checklist></doctor-checklist>
+  <pear-version></pear-version>
+  <pear-logo></pear-logo>
+
   <script type="module" src="./lib/doctor-checklist.js"></script>
+  <script type="module" src="./lib/pear-version.js"></script>
+  <script type="module" src="./lib/pear-logo.js"></script>
 </body>
