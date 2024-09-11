@@ -1,0 +1,14 @@
+{
+  "name": "worker",
+  "main": "index.js",
+  "type": "module",
+  "pear": {
+    "name": "worker",
+    "type": "terminal"
+  },
+  "dependencies": {
+    "bare-subprocess": "^3.0.0",
+    "tiny-buffer-rpc": "^2.1.1",
+    "which-runtime": "^1.2.0"
+  }
+}

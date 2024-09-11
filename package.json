@@ -13,6 +13,11 @@
       "backgroundColor": "#151517",
       "height": 1400,
       "width": 1100
+    },
+    "links": {
+      "worker-3": "pear://gxdp7ogdnb1m761jfbkpczipurpkzopdt5x7t9nwm718whkz6uxy",
+      "worker-2": "pear://rp8h7sueaxn64f5a8z6a9o6kykbqkupjkpanqtzuqw7noauhybby",
+      "worker": "pear://rp8h7sueaxn64f5a8z6a9o6kykbqkupjkpanqtzuqw7noauhybby/worker/index.js"
     }
   },
   "standard": {
@@ -21,6 +26,8 @@
     ]
   },
   "dependencies": {
+    "compact-encoding": "^2.15.0",
+    "tiny-buffer-rpc": "^2.1.1",
     "pear-user-dirs": "^1.0.1",
     "redhat-overpass-font": "^1.0.0",
     "which-runtime": "^1.2.0",
