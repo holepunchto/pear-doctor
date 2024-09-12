@@ -37,6 +37,7 @@ function sidecars (opts = {name: 'pear-runtime', flag: '--sidecar'}) {
 
   const lines = output.split(isWindows ? '\r\r\n' : '\n')
   for (const line of lines) {
+    console.log(line)
     if (!line.trim()) continue
     const columns = line.split(isWindows ? ',' : ' ').filter(col => col)
 
