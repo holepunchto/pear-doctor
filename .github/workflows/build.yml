@@ -29,6 +29,7 @@ on:
           - test8
           - test9
           - test10
+          - test11
       custom-commit:
         type: string
         description: Custom commit
