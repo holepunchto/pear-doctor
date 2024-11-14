@@ -29,6 +29,7 @@
   },
   "devDependencies": {
     "brittle": "^3.4.0",
+    "pear-interface": "^1.0.3",
     "standard": "^17.1.0"
   },
   "directories": {
