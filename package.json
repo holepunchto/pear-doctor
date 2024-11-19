@@ -1,6 +1,6 @@
 {
   "name": "pear-doctor",
-  "version": "1.0.0-rc.0",
+  "version": "1.0.0-rc.1",
   "description": "> The Pear Doctor Application",
   "main": "index.html",
   "type": "module",
