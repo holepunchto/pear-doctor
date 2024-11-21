@@ -5,7 +5,7 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
-    "test": "standard --fix"
+    "test": "standard"
   },
   "pear": {
     "name": "pear-doctor",
