@@ -5,7 +5,7 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
-    "test": "standard --fix"
+    "test": "standard"
   },
   "pear": {
     "name": "pear-doctor",
@@ -13,6 +13,16 @@
       "backgroundColor": "#151517",
       "height": 1400,
       "width": 1100
+    },
+    "stage": {
+      "entrypoints": [
+        "/lib/doctor-checklist.js",
+        "/lib/pear-logo.js",
+        "/lib/pear-version.js"
+      ],
+      "prefetch": [
+        "/assets"
+      ]
     }
   },
   "standard": {
