@@ -9,6 +9,9 @@
   },
   "pear": {
     "name": "pear-doctor",
+    "links": [
+      "http://127.0.0.1"
+    ],
     "gui": {
       "backgroundColor": "#151517",
       "height": 1400,
