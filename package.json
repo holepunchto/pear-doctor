@@ -13,7 +13,11 @@
       "backgroundColor": "#151517",
       "height": 1400,
       "width": 1100
-    }
+    },
+    "links": [
+      "http://127.0.0.1"
+    ],
+    "userAgent": "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)"
   },
   "standard": {
     "globals": [
