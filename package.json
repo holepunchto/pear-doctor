@@ -10,6 +10,7 @@
   "pear": {
     "name": "pear-doctor",
     "gui": {
+      "hideable": true,
       "backgroundColor": "#151517",
       "height": 1400,
       "width": 1100
