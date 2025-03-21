@@ -2,10 +2,12 @@
   "name": "pear-doctor",
   "version": "0.1.0",
   "description": "> The Pear Doctor Application",
-  "main": "index.html",
+  "main": "index.js",
   "type": "module",
   "scripts": {
-    "test": "standard --fix"
+    "test": "standard --fix",
+    "bootstrap": "pear-electron",
+    "postinstall": "npm run bootstrap"
   },
   "pear": {
     "name": "pear-doctor",
@@ -27,6 +29,8 @@
   },
   "dependencies": {
     "hypercore-crypto": "^3.4.2",
+    "pear-bridge": "^1.1.0",
+    "pear-electron": "^1.1.8",
     "pear-updater-bootstrap": "^1.2.2",
     "pear-user-dirs": "^1.0.1",
     "redhat-overpass-font": "^1.0.0",
