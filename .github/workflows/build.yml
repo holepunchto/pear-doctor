@@ -50,6 +50,6 @@ jobs:
           seed: ${{ inputs.channel == 'next' && secrets.AUTOMATION_NEXT || secrets.AUTOMATION }}
           remote: ${{ inputs.channel == 'next' && secrets.AUTOMATION_PUBLIC_KEY_NEXT || secrets.AUTOMATION_PUBLIC_KEY }}
           job: pear-doctor
-          channel: ${{ inputs.channel-text || inputs.channel || 'preview' }}
-          commit: ${{ github.sha }}
+          channel: ${{ inputs.channel }}
+          commit: ${{ inputs.custom-commit || github.sha }}
           notify: ${{ inputs.notify && 'true' || 'false' }}
