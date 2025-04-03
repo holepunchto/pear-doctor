@@ -19,6 +19,7 @@ on:
           - stage
           - rc
           - production
+          - next
       custom-commit:
         type: string
         description: Custom commit
@@ -35,10 +36,20 @@ run-name: Build ${{ inputs.channel }}
 
 jobs:
   build:
-    uses: holepunchto/actions/.github/workflows/keet-automation.yml@v1
-    secrets: inherit
-    with:
-      job: pear-doctor
-      channel: ${{ inputs.channel }}
-      commit: ${{ inputs.custom-commit || github.sha }}
-      dry-run: ${{ inputs.dry-run }}
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup repo
+        uses: holepunchto/actions/.github/steps/setup-repo@v1
+
+      - name: Keet Automation
+        uses: holepunchto/actions/.github/steps/keet-automation@v1
+        timeout-minutes: 15
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          seed: ${{ inputs.channel == 'next' && secrets.AUTOMATION_NEXT || secrets.AUTOMATION }}
+          remote: ${{ inputs.channel == 'next' && secrets.AUTOMATION_PUBLIC_KEY_NEXT || secrets.AUTOMATION_PUBLIC_KEY }}
+          job: pear-doctor
+          channel: ${{ inputs.channel-text || inputs.channel || 'preview' }}
+          commit: ${{ github.sha }}
+          notify: ${{ inputs.notify && 'true' || 'false' }}
