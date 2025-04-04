@@ -27,7 +27,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: lts/*
-      - run: npm i -g pear@latest
-      - run: pear sidecar --key=3oh9mxcft8rsq3mocxzi7s8hhb7zw8s55nuca95ffsqzd6oyy4zo
       - run: npm i
       - run: npm test
