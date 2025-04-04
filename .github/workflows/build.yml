@@ -52,4 +52,5 @@ jobs:
           job: pear-doctor
           channel: ${{ inputs.channel }}
           commit: ${{ inputs.custom-commit || github.sha }}
-          notify: ${{ inputs.notify && 'true' || 'false' }}
+          dry-run: ${{ inputs.dry-run }}
+          notify: 'true'
