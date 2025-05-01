@@ -4,8 +4,7 @@ import Bridge from 'pear-bridge'
 
 const runtime = new Runtime()
 
-const bridge = new Bridge({ waypoint: '/index.html' })
+const bridge = new Bridge()
 await bridge.ready()
 
-const pipe = await runtime.start({ bridge })
-Pear.teardown(() => pipe.end())
+await runtime.start({ bridge })

@@ -12,10 +12,10 @@
   "pear": {
     "name": "pear-doctor",
     "gui": {
-      "hideable": true,
       "backgroundColor": "#151517",
       "height": 1400,
-      "width": 1100
+      "width": 1100,
+      "closeHides": true
     },
     "links": [
       "http://127.0.0.1"
