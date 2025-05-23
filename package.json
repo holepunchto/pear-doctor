@@ -28,7 +28,7 @@
   "dependencies": {
     "hypercore-crypto": "^3.4.2",
     "pear-bridge": "^1.1.0",
-    "pear-electron": "^1.4.13",
+    "pear-electron": "^1.4.15",
     "pear-updater-bootstrap": "^1.2.2",
     "pear-user-dirs": "^1.0.1",
     "redhat-overpass-font": "^1.0.0",
