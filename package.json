@@ -13,12 +13,12 @@
       "backgroundColor": "#151517",
       "height": 1400,
       "width": 1100,
-      "closeHides": true
+      "closeHides": true,
+      "userAgent": "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)"
     },
     "links": [
       "http://127.0.0.1"
-    ],
-    "userAgent": "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)"
+    ]
   },
   "standard": {
     "globals": [
@@ -28,7 +28,7 @@
   "dependencies": {
     "hypercore-crypto": "^3.4.2",
     "pear-bridge": "^1.1.0",
-    "pear-electron": "^1.4.15",
+    "pear-electron": "file:../test/pear-electron/pear-electron-1.4.17.tgz",
     "pear-updater-bootstrap": "^1.2.2",
     "pear-user-dirs": "^1.0.1",
     "redhat-overpass-font": "^1.0.0",
