@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "hypercore-crypto": "^3.4.2",
+    "localdrive": "^2.2.0",
     "pear-bridge": "^1.1.0",
     "pear-electron": "^1.4.17",
     "pear-updater-bootstrap": "^1.2.2",
