@@ -123,6 +123,3 @@ dist
 .yarn/install-state.gz
 .pnp.*
 todo.*
-
-# checkmark saves
-userData/
