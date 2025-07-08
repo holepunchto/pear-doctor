@@ -8,6 +8,7 @@
     "test": "standard --fix"
   },
   "pear": {
+    "pre": "pear-electron/pre",
     "name": "pear-doctor",
     "gui": {
       "backgroundColor": "#151517",
@@ -30,7 +31,7 @@
     "hyperdb": "^4.13.1",
     "hyperschema": "^1.12.3",
     "pear-bridge": "^1.1.1",
-    "pear-electron": "^1.6.0",
+    "pear-electron": "^1.7.5",
     "pear-updater-bootstrap": "^1.2.2",
     "pear-user-dirs": "^1.0.1",
     "redhat-overpass-font": "^1.0.0",
