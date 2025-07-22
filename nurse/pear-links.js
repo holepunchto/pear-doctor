@@ -54,6 +54,10 @@ customElements.define(
                 <strong>Entrypoint fragment:</strong>
                 <a id="link4" href="#">pear://&lt;app-key&gt;/nested/entrypoint.html#fragment</a>
               </li>
+              <li>
+                <strong>Legacy invite code:</strong>
+                <a id="link5" href="#">pear://&lt;app-key&gt;/xeb7mugj8s...</a>
+              </li>
             </ul>
           </div>
         `
