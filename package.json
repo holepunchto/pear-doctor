@@ -8,6 +8,10 @@
     "test": "standard --fix"
   },
   "pear": {
+    "routes": ".",
+    "unrouted": [
+      "/subprocess/index.js"
+    ],
     "pre": "pear-electron/pre",
     "name": "pear-doctor",
     "gui": {
@@ -31,7 +35,7 @@
     "hyperdb": "^4.15.0",
     "hyperschema": "^1.12.4",
     "pear-bridge": "^1.1.3",
-    "pear-electron": "^1.7.8",
+    "pear-electron": "file:../pear-electron/pear-electron-1.7.17.tgz",
     "pear-updater-bootstrap": "^1.3.0",
     "pear-user-dirs": "^1.0.2",
     "redhat-overpass-font": "^1.0.0",
