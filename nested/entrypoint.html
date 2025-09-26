@@ -1,32 +1,32 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--<meta http-equiv="refresh" content="0; url=../index.html?source=nested-entrypoint" />-->
+    <title>Redirecting...</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!--<meta http-equiv="refresh" content="0; url=../index.html?source=nested-entrypoint" />-->
-  <title>Redirecting...</title>
-</head>
+  <body>
+    <p>
+      If you are not redirected automatically, follow this
+      <a id="redirect-link">link to the homepage</a>.
+    </p>
+    <script>
+      window.addEventListener('load', function () {
+        const currentFilePath = window.location.href
+        const baseDir = currentFilePath.substring(
+          0,
+          currentFilePath.lastIndexOf('/')
+        )
+        const newFilePath = baseDir + '/../index.html?source=nested-entrypoint'
+        const fileUrl = new URL(newFilePath, window.location.origin).href
 
-<body>
-  <p>
-    If you are not redirected automatically, follow this
-    <a id="redirect-link">link to the homepage</a>.
-  </p>
-  <script>
-    window.addEventListener('load', function() {
-      const currentFilePath = window.location.href
-      const baseDir = currentFilePath.substring(0,currentFilePath.lastIndexOf('/'))
-      const newFilePath = baseDir + '/../index.html?source=nested-entrypoint'
-      const fileUrl = new URL(newFilePath, window.location.origin).href
+        document.getElementById('redirect-link').href = fileUrl
 
-      document.getElementById('redirect-link').href = fileUrl
-
-      localStorage.setItem('nested-entrypoint', true)
-      window.location.href = fileUrl
-
-    })
-  </script>
-</body>
-
+        localStorage.setItem('nested-entrypoint', true)
+        window.location.href = fileUrl
+      })
+    </script>
+  </body>
 </html>

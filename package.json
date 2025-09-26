@@ -5,7 +5,9 @@
   "main": "index.html",
   "type": "module",
   "scripts": {
-    "test": "standard --fix"
+    "format": "prettier --write .",
+    "lint": "prettier --check .",
+    "test": "prettier --check ."
   },
   "pear": {
     "name": "pear-doctor",
@@ -20,11 +22,6 @@
     ],
     "userAgent": "Slackbot-LinkExpanding 1.0 (+https://api.slack.com/robots)"
   },
-  "standard": {
-    "globals": [
-      "Pear"
-    ]
-  },
   "dependencies": {
     "hypercore-crypto": "^3.4.2",
     "pear-updater-bootstrap": "^1.2.2",
@@ -36,7 +33,8 @@
   "devDependencies": {
     "brittle": "^3.4.0",
     "pear-interface": "^1.0.3",
-    "standard": "^17.1.0"
+    "prettier": "^3.6.2",
+    "prettier-config-holepunch": "^1.0.0"
   },
   "directories": {
     "lib": "lib"
