@@ -3,7 +3,7 @@
 customElements.define(
   'pear-links',
   class PearLinks extends HTMLElement {
-    constructor () {
+    constructor() {
       super()
       this.attachShadow({ mode: 'open' })
       this.shadowRoot.innerHTML = `
@@ -58,10 +58,12 @@ customElements.define(
           </div>
         `
 
-      this.shadowRoot.querySelector('#app-key').addEventListener('input', this.updateLinks.bind(this))
+      this.shadowRoot
+        .querySelector('#app-key')
+        .addEventListener('input', this.updateLinks.bind(this))
     }
 
-    updateLinks (event) {
+    updateLinks(event) {
       const appKey = event.target.value
       const linkList = this.shadowRoot.querySelector('#link-list')
 
@@ -72,13 +74,17 @@ customElements.define(
       }
 
       this.shadowRoot.querySelector('#link1').href = `pear://${appKey}`
-      this.shadowRoot.querySelector('#link2').href = `pear://${appKey}/#fragment`
-      this.shadowRoot.querySelector('#link3').href = `pear://${appKey}/nested/entrypoint.html`
-      this.shadowRoot.querySelector('#link4').href = `pear://${appKey}/nested/entrypoint.html#fragment`
-      this.shadowRoot.querySelector('#link5').href = `pear://${appKey}/xeb7mugj8sbaytkf5qqu9z1snegtibqneysssdqu35em4zw3ou9wcmz8ha4er6e759tams9eeebo6j6ueifyb4oaeohnijbyxfzessxjneaqs8ux`
+      this.shadowRoot.querySelector('#link2').href =
+        `pear://${appKey}/#fragment`
+      this.shadowRoot.querySelector('#link3').href =
+        `pear://${appKey}/nested/entrypoint.html`
+      this.shadowRoot.querySelector('#link4').href =
+        `pear://${appKey}/nested/entrypoint.html#fragment`
+      this.shadowRoot.querySelector('#link5').href =
+        `pear://${appKey}/xeb7mugj8sbaytkf5qqu9z1snegtibqneysssdqu35em4zw3ou9wcmz8ha4er6e759tams9eeebo6j6ueifyb4oaeohnijbyxfzessxjneaqs8ux`
     }
 
-    createElement (html) {
+    createElement(html) {
       const template = document.createElement('template')
       template.innerHTML = html
       this.shadowRoot.appendChild(template.content.cloneNode(true))
