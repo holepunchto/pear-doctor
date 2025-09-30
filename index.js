@@ -8,5 +8,4 @@ const bridge = new Bridge()
 await bridge.ready()
 
 const pipe = await runtime.start({ bridge })
-
-Pear.teardown(() => pipe.destroy())
+pipe.on('close', () => Pear.exit())
