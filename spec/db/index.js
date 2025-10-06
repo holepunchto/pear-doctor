@@ -5,11 +5,9 @@ import { IndexEncoder, c } from 'hyperdb/runtime'
 import { version, getEncoding, setVersion } from './messages.js'
 
 // '@doctor/checklist' collection key
-const collection0_key = new IndexEncoder([
-  IndexEncoder.STRING
-], { prefix: 0 })
+const collection0_key = new IndexEncoder([IndexEncoder.STRING], { prefix: 0 })
 
-function collection0_indexify (record) {
+function collection0_indexify(record) {
   const a = record.key
   return a === undefined ? [] : [a]
 }
@@ -18,7 +16,7 @@ function collection0_indexify (record) {
 const collection0_enc = getEncoding('@doctor/checklist/hyperdb#0')
 
 // '@doctor/checklist' reconstruction function
-function collection0_reconstruct (version, keyBuf, valueBuf) {
+function collection0_reconstruct(version, keyBuf, valueBuf) {
   const key = collection0_key.decode(keyBuf)
   setVersion(version)
   const record = c.decode(collection0_enc, valueBuf)
@@ -26,7 +24,7 @@ function collection0_reconstruct (version, keyBuf, valueBuf) {
   return record
 }
 // '@doctor/checklist' key reconstruction function
-function collection0_reconstruct_key (keyBuf) {
+function collection0_reconstruct_key(keyBuf) {
   const key = collection0_key.decode(keyBuf)
   return {
     key: key[0]
@@ -37,11 +35,11 @@ function collection0_reconstruct_key (keyBuf) {
 const collection0 = {
   name: '@doctor/checklist',
   id: 0,
-  encodeKey (record) {
+  encodeKey(record) {
     const key = [record.key]
     return collection0_key.encode(key)
   },
-  encodeKeyRange ({ gt, lt, gte, lte } = {}) {
+  encodeKeyRange({ gt, lt, gte, lte } = {}) {
     return collection0_key.encodeRange({
       gt: gt ? collection0_indexify(gt) : null,
       lt: lt ? collection0_indexify(lt) : null,
@@ -49,7 +47,7 @@ const collection0 = {
       lte: lte ? collection0_indexify(lte) : null
     })
   },
-  encodeValue (version, record) {
+  encodeValue(version, record) {
     setVersion(version)
     return c.encode(collection0_enc, record)
   },
@@ -59,24 +57,30 @@ const collection0 = {
   indexes: []
 }
 
-const collections = [
-  collection0
-]
+const collections = [collection0]
 
-const indexes = [
-]
+const indexes = []
 
-export default { version, collections, indexes, resolveCollection, resolveIndex }
+export default {
+  version,
+  collections,
+  indexes,
+  resolveCollection,
+  resolveIndex
+}
 
-function resolveCollection (name) {
+function resolveCollection(name) {
   switch (name) {
-    case '@doctor/checklist': return collection0
-    default: return null
+    case '@doctor/checklist':
+      return collection0
+    default:
+      return null
   }
 }
 
-function resolveIndex (name) {
+function resolveIndex(name) {
   switch (name) {
-    default: return null
+    default:
+      return null
   }
 }
