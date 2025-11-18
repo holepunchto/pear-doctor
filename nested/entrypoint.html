@@ -15,10 +15,7 @@
     <script>
       window.addEventListener('load', function () {
         const currentFilePath = window.location.href
-        const baseDir = currentFilePath.substring(
-          0,
-          currentFilePath.lastIndexOf('/')
-        )
+        const baseDir = currentFilePath.substring(0, currentFilePath.lastIndexOf('/'))
         const newFilePath = baseDir + '/../index.html?source=nested-entrypoint'
         const fileUrl = new URL(newFilePath, window.location.origin).href
 

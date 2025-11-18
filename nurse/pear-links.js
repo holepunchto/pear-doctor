@@ -74,10 +74,8 @@ customElements.define(
       }
 
       this.shadowRoot.querySelector('#link1').href = `pear://${appKey}`
-      this.shadowRoot.querySelector('#link2').href =
-        `pear://${appKey}/#fragment`
-      this.shadowRoot.querySelector('#link3').href =
-        `pear://${appKey}/nested/entrypoint.html`
+      this.shadowRoot.querySelector('#link2').href = `pear://${appKey}/#fragment`
+      this.shadowRoot.querySelector('#link3').href = `pear://${appKey}/nested/entrypoint.html`
       this.shadowRoot.querySelector('#link4').href =
         `pear://${appKey}/nested/entrypoint.html#fragment`
       this.shadowRoot.querySelector('#link5').href =
