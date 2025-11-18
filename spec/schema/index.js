@@ -81,13 +81,4 @@ function getStruct(name, v = VERSION) {
 
 const resolveStruct = getStruct // compat
 
-export {
-  resolveStruct,
-  getStruct,
-  getEnum,
-  getEncoding,
-  encode,
-  decode,
-  setVersion,
-  version
-}
+export { resolveStruct, getStruct, getEnum, getEncoding, encode, decode, setVersion, version }
